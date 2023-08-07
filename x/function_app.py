@@ -6,7 +6,7 @@ from azure.keyvault.secrets import SecretClient
 # Create a DefaultAzureCredential instance to authenticate
 # using the managed identity of the Azure Function
 credential = DefaultAzureCredential()
-key_vault_url = "https://your_key_vault.vault.azure.net/"
+key_vault_url = "https://your_valid_key_vault.vault.azure.net/"
 secret_name = "your-secret-name"
 # Create a SecretClient to interact with the Azure Key Vault
 secret_client = SecretClient(vault_url=key_vault_url, credential=credential)
