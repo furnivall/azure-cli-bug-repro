@@ -5,7 +5,7 @@ Minimum viable reproduction for bug in Azure CLI / Azure SDK for Python
 **Description:**
 DefaultAzureCredential runs through a bunch of options, including AzureCliCredential.
 
-When it reaches [this line](https://github.com/Azure/azure-sdk-for-python/blob/c4c18a7b427633c0519016d762dc141ae743e41b/sdk/identity/azure-identity/azure/identity/_credentials/azure_cli.py#L176) within AzureCliCredential, it will *always* fail the timeout with an outdated software version, as the cli prompt returned by `az account get-access-token --output json --resource <whatever>` will always return the following which requires a response:
+When it reaches [this line](https://github.com/Azure/azure-sdk-for-python/blob/c4c18a7b427633c0519016d762dc141ae743e41b/sdk/identity/azure-identity/azure/identity/_credentials/azure_cli.py#L176) within AzureCliCredential, it will *always* fail the timeout with an outdated software version, as the cli prompt returned by `az account get-access-token --output json --resource <whatever>` embedded within that page will always return the following which requires a user response:
 ```
 New Azure CLI version available. Running 'az upgrade' to update automatically.
 This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus
