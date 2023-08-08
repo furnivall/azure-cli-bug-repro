@@ -1,5 +1,5 @@
 # azure-cli-bug-repro
-Minimum viable reproduction for bug in Azure CLI / Azure SDK for Python
+Minimum viable reproduction for bug in Azure CLI / Azure SDK for Python - linked issues: https://github.com/Azure/azure-cli/issues/27111 https://github.com/Azure/azure-sdk-for-python/issues/31493
 
 
 **Description:**
